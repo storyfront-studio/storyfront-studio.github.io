@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ngao Barbers — Cut Sharp, Leave Sharper · Kimathi Street, Nairobi</title>
+<meta name="description" content="Precision fades, clean cuts, beard sculpting, braids and colour by cousins Juma & Tito. Ngao Barbers — Mwamba House, Kimathi Street, Nairobi CBD. Book on WhatsApp.">
+<link rel="icon" type="image/png" href="images/icon-96.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0D0D0F;
+    --ink-2:#151518;
+    --card:#1A1A1E;
+    --line:#2A2A30;
+    --gold:#E1A823;
+    --gold-hi:#F2C14E;
+    --bone:#F6F3EC;
+    --muted:#A39E92;
+    --wa:#25D366;
+    --disp:'Big Shoulders Display', 'Arial Narrow', sans-serif;
+    --body:'Work Sans', system-ui, -apple-system, sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--bone);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+
+  /* ---------- top bar ---------- */
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(13,13,15,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topbar .wrap{display:flex;align-items:center;gap:12px;height:62px}
+  .brandmark{width:38px;height:38px;border-radius:9px;overflow:hidden;background:#fff;flex-shrink:0;border:1px solid var(--line)}
+  .brandname{font-family:var(--disp);font-weight:800;font-size:19px;letter-spacing:.06em;text-transform:uppercase;line-height:1.05}
+  .brandname span{color:var(--gold)}
+  .topbar .cta{margin-left:auto;background:var(--gold);color:#141414;font-weight:600;font-size:14px;padding:9px 16px;border-radius:999px;white-space:nowrap;transition:transform .15s ease, background .15s ease}
+  .topbar .cta:hover{background:var(--gold-hi);transform:translateY(-1px)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:56px 0 64px;background:
+    radial-gradient(900px 420px at 85% -10%, rgba(225,168,35,.13), transparent 60%),
+    var(--ink)}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--gold)}
+  h1{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(52px,8.5vw,92px);line-height:.92;letter-spacing:.01em}
+  h1 .fadeword{background:linear-gradient(180deg,var(--gold-hi) 0%,var(--gold) 42%,rgba(225,168,35,.12) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p.lead{margin:20px 0 28px;color:var(--muted);font-size:17px;max-width:46ch}
+  .hero p.lead strong{color:var(--bone);font-weight:600}
+  .btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;padding:14px 22px;border-radius:999px;transition:transform .15s ease, background .15s ease, border-color .15s ease}
+  .btn svg{flex-shrink:0}
+  .btn-wa{background:var(--wa);color:#062b16}
+  .btn-wa:hover{background:#3ae07c;transform:translateY(-1px)}
+  .btn-ghost{border:1.5px solid var(--line);color:var(--bone)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-hi);transform:translateY(-1px)}
+  .proof{display:flex;flex-wrap:wrap;gap:10px}
+  .chip{font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:7px 14px;background:var(--ink-2)}
+  .chip b{color:var(--gold);font-weight:600}
+
+  .heroimg{position:relative}
+  .heroimg .photo{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -25px rgba(0,0,0,.8)}
+  .heroimg .photo img{width:100%;height:auto}
+  .herobadge{position:absolute;left:-22px;bottom:-22px;width:104px;height:104px;border-radius:22px;overflow:hidden;background:#fff;border:3px solid var(--gold);box-shadow:0 16px 34px -12px rgba(0,0,0,.75)}
+
+  /* ---------- sections ---------- */
+  section{padding:72px 0}
+  .sechead{margin-bottom:38px}
+  h2{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(34px,5vw,52px);line-height:1;letter-spacing:.015em}
+  h2 em{font-style:normal;color:var(--gold)}
+  .sechead p{color:var(--muted);margin-top:10px;max-width:56ch}
+
+  /* services */
+  .services{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .svcgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .svc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px;transition:border-color .2s ease, transform .2s ease}
+  .svc:hover{border-color:rgba(225,168,35,.55);transform:translateY(-3px)}
+  .svc .ic{width:44px;height:44px;border-radius:12px;background:rgba(225,168,35,.12);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--gold)}
+  .svc h3{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:22px;letter-spacing:.03em;margin-bottom:8px}
+  .svc p{color:var(--muted);font-size:14.5px}
+  .svc.more{background:transparent;border-style:dashed;display:flex;flex-direction:column;justify-content:center}
+  .svc.more a{color:var(--gold);font-weight:600}
+  .svc.more a:hover{color:var(--gold-hi)}
+
+  /* booking */
+  .bookcard{background:linear-gradient(135deg, rgba(225,168,35,.10), rgba(225,168,35,.02)), var(--card);border:1px solid rgba(225,168,35,.35);border-radius:20px;padding:34px 30px;display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+  .bookcard h2{font-size:clamp(30px,4.4vw,44px)}
+  .bookcard .note{color:var(--muted);font-size:14.5px;margin-top:12px}
+  .bookform{display:grid;gap:12px}
+  .bookform label{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .bookform input,.bookform select{width:100%;background:var(--ink);border:1px solid var(--line);color:var(--bone);border-radius:11px;padding:13px 14px;font-family:var(--body);font-size:15px;appearance:none}
+  .bookform input:focus,.bookform select:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:transparent}
+  .bookform .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .bookform button{cursor:pointer;border:none;margin-top:4px;justify-content:center}
+
+  /* gallery */
+  .galgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .gal{border-radius:16px;overflow:hidden;border:1px solid var(--line);position:relative}
+  .gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .gal:hover img{transform:scale(1.04)}
+  .galrow2{display:grid;grid-template-columns:200px 1fr;gap:14px;margin-top:14px;align-items:stretch}
+  .gal.small img{filter:saturate(1.05)}
+  .galcap{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;justify-content:center}
+  .galcap h3{font-family:var(--disp);text-transform:uppercase;font-weight:700;font-size:22px;letter-spacing:.03em;margin-bottom:6px}
+  .galcap p{color:var(--muted);font-size:14.5px}
+  .galcap a{color:var(--gold);font-weight:600}
+  .galcap a:hover{color:var(--gold-hi)}
+
+  /* team */
+  .teamgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .team{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px;display:flex;gap:18px;align-items:flex-start}
+  .tavatar{width:56px;height:56px;border-radius:16px;background:rgba(225,168,35,.14);border:1px solid rgba(225,168,35,.4);color:var(--gold);font-family:var(--disp);font-weight:800;font-size:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .team h3{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:24px;letter-spacing:.03em}
+  .trole{color:var(--gold);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:2px 0 8px}
+  .tbio{color:var(--muted);font-size:14.5px}
+  .tlinks{margin-top:10px;font-size:14px}
+  .tlinks a{color:var(--gold);font-weight:600}
+  .tlinks a:hover{color:var(--gold-hi)}
+  @media (max-width:860px){.teamgrid{grid-template-columns:1fr}}
+
+  /* reviews */
+  .reviews{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .revgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .rev{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px}
+  .rev .stars{color:var(--gold);letter-spacing:3px;font-size:15px;margin-bottom:12px}
+  .rev p{font-size:15px;color:var(--bone)}
+  .rev .who{margin-top:14px;color:var(--muted);font-size:13.5px}
+
+  /* visit */
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .maplink{display:block;border-radius:18px;overflow:hidden;border:1px solid var(--line);position:relative;box-shadow:0 24px 50px -24px rgba(0,0,0,.8)}
+  .maplink img{width:100%}
+  .maplink .maptag{position:absolute;left:14px;bottom:14px;background:rgba(13,13,15,.88);border:1px solid var(--line);color:var(--bone);font-size:13px;font-weight:600;padding:9px 15px;border-radius:999px;display:flex;align-items:center;gap:8px}
+  .maplink .maptag svg{color:var(--gold)}
+  .maplink:hover .maptag{border-color:var(--gold)}
+  .vrow{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+  .vrow:last-of-type{border-bottom:none}
+  .vrow .vic{color:var(--gold);flex-shrink:0;margin-top:3px}
+  .vrow h4{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+  .vrow p{font-size:15.5px}
+  .vrow p a{color:var(--gold);font-weight:600}
+  .vrow p a:hover{color:var(--gold-hi)}
+
+  /* footer */
+  footer{border-top:1px solid var(--line);padding:40px 0 90px;background:var(--ink)}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+  footer .fbrand{display:flex;align-items:center;gap:11px}
+  footer .fbrand .brandmark{width:34px;height:34px}
+  footer .fsmall{color:var(--muted);font-size:13.5px}
+  footer .socials{display:flex;gap:10px}
+  footer .socials a{width:40px;height:40px;border:1px solid var(--line);border-radius:11px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:color .15s, border-color .15s}
+  footer .socials a:hover{color:var(--gold);border-color:var(--gold)}
+
+  /* floating whatsapp */
+  .fab{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;color:#062b16;box-shadow:0 14px 30px -8px rgba(37,211,102,.55);transition:transform .15s ease}
+  .fab:hover{transform:scale(1.07)}
+
+  /* reveal on scroll */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+
+  /* responsive */
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;gap:36px}
+    .heroimg{max-width:440px}
+    .svcgrid{grid-template-columns:1fr}
+    .bookcard{grid-template-columns:1fr;padding:28px 22px}
+    .galgrid{grid-template-columns:1fr 1fr}
+    .galgrid .gal:nth-child(3){grid-column:span 2}
+    .galrow2{grid-template-columns:1fr}
+    .galrow2 .gal.small{max-width:220px}
+    .revgrid{grid-template-columns:1fr}
+    .visit .wrap{grid-template-columns:1fr}
+    section{padding:56px 0}
+  }
+  @media (max-width:420px){
+    .brandname{font-size:16px}
+    .topbar .cta{font-size:13px;padding:8px 13px}
+    .herobadge{width:84px;height:84px;left:-10px;bottom:-14px}
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brandmark"><img src="images/icon-96.png" alt="Ngao Barbers logo"></div>
+    <div class="brandname">Ngao <span>Barbers</span></div>
+    <a class="cta" href="https://wa.me/254769968444?text=Hi%20Storyfront%2C%20I%20just%20saw%20the%20Ngao%20Barbers%20concept%20on%20your%20portfolio.%20I%27d%20like%20a%20website%20like%20this%20for%20my%20business." target="_blank" rel="noopener">Book on WhatsApp</a>
+  </div>
+</header>
+
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Mwamba House · Kimathi Street · Nairobi CBD</div>
+      <h1>Cut <span class="fadeword">Sharp</span><br>Leave Sharper</h1>
+      <p class="lead">Precision fades, clean cuts, beard sculpting, braids and colour — founded by cousins <strong>Juma &amp; Tito</strong>. Walk out sharper than you walked in.</p>
+      <div class="btnrow">
+        <a class="btn btn-wa" href="https://wa.me/254769968444?text=Hi%20Storyfront%2C%20I%20just%20saw%20the%20Ngao%20Barbers%20concept%20on%20your%20portfolio.%20I%27d%20like%20a%20website%20like%20this%20for%20my%20business." target="_blank" rel="noopener">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.83 14.16c-.25.7-1.45 1.33-2 1.38-.51.05-1.16.24-3.92-.82-3.32-1.31-5.42-4.72-5.58-4.94-.16-.22-1.33-1.77-1.33-3.38 0-1.61.85-2.4 1.15-2.73.3-.33.66-.41.88-.41l.63.01c.2.01.47-.08.74.56.27.66.93 2.27 1.01 2.43.08.16.14.36.03.58-.11.22-.16.36-.32.55-.16.19-.34.43-.49.58-.16.16-.33.34-.14.66.19.33.84 1.39 1.8 2.25 1.24 1.1 2.28 1.44 2.61 1.6.33.16.52.14.71-.08.19-.22.82-.95 1.04-1.28.22-.33.44-.27.74-.16.3.11 1.9.9 2.23 1.06.33.16.55.25.63.38.08.14.08.8-.17 1.5z"/></svg>
+          Request an appointment
+        </a>
+        <a class="btn btn-ghost" href="tel:+254769968444">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call 0769 968 444
+        </a>
+      </div>
+      <div class="proof">
+        <div class="chip"><b>6 days</b> a week, 7am to 7pm</div>
+        <div class="chip">Walk-ins welcome <b>when a chair is free</b></div>
+        <div class="chip">Two chairs, family-run</div>
+      </div>
+    </div>
+    <div class="heroimg">
+      <div class="photo"><img src="images/hero.jpg" alt="A clean skin fade and sculpted beard, in profile" width="680" height="907"></div>
+      <div class="herobadge"><img src="images/badge.png" alt="Ngao Barbers — Cut Sharp, Leave Sharper"></div>
+    </div>
+  </div>
+</div>
+
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <div class="eyebrow">The craft</div>
+      <h2>What's on <em>the chair</em></h2>
+      <p>Fades are the signature, not the limit — classic cuts, trims and styling too. Tell us what you want on WhatsApp, or just show us a photo.</p>
+    </div>
+    <div class="svcgrid">
+      <div class="svc reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3v12"/><circle cx="6" cy="18" r="3"/><path d="M6 3l12 18"/><path d="M18 3L9.5 15.5"/></svg></div>
+        <h3>Signature skin fade</h3>
+        <p>Razor-sharp blends from skin to length — low, mid or high — with a crisp line-up to finish.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 4L4 20"/><path d="M14.5 4a5.5 5.5 0 0 1 5.5 5.5"/><path d="M4 14.5A5.5 5.5 0 0 0 9.5 20"/></svg></div>
+        <h3>Beard sculpt &amp; line-up</h3>
+        <p>Shaping, defined edges and clean gradients that connect the beard to the cut.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4c4 3 4 13 0 16"/><path d="M10 4c4 3 4 13 0 16"/><path d="M16 4c4 3 4 13 0 16"/></svg></div>
+        <h3>Braids &amp; cornrows</h3>
+        <p>Pattern braids and cornrows, paired with a faded finish for a complete look.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.7s6 6.3 6 10.3a6 6 0 0 1-12 0c0-4 6-10.3 6-10.3z"/></svg></div>
+        <h3>Colour &amp; creative work</h3>
+        <p>Dye jobs, freestyle designs and hair art — from subtle tints to statement colour.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.1 8.1L20 20"/><path d="M8.1 15.9L20 4"/></svg></div>
+        <h3>Classic cuts &amp; trims</h3>
+        <p>Not every cut is a fade — clean regular haircuts, shape-ups and maintenance trims done right.</p>
+      </div>
+      <div class="svc more reveal">
+        <p>Kids' cuts, treatments or something custom? <a href="https://wa.me/254769968444?text=Hi%20Storyfront%2C%20I%20just%20saw%20the%20Ngao%20Barbers%20concept%20on%20your%20portfolio.%20I%27d%20like%20a%20website%20like%20this%20for%20my%20business." target="_blank" rel="noopener">Ask us on WhatsApp →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="book">
+  <div class="wrap">
+    <div class="bookcard reveal">
+      <div>
+        <div class="eyebrow">Book the chair</div>
+        <h2>Request your <em>slot</em></h2>
+        <p class="note">Appointments keep your wait short. Fill this in and it opens WhatsApp with your request ready to send — we confirm your time personally. Walk-ins welcome when a chair is free.</p>
+      </div>
+      <div class="bookform">
+        <div>
+          <label for="bname">Your name</label>
+          <input id="bname" type="text" placeholder="e.g. Brian" autocomplete="name">
+        </div>
+        <div>
+          <label for="bsvc">Service</label>
+          <select id="bsvc">
+            <option>Skin fade</option>
+            <option>Fade + beard sculpt</option>
+            <option>Braids / cornrows</option>
+            <option>Colour / dye</option>
+            <option>Kids' cut</option>
+            <option>Other (I'll explain)</option>
+          </select>
+        </div>
+        <div>
+          <label for="bbarber">Preferred barber</label>
+          <select id="bbarber">
+            <option>First available</option>
+            <option>Juma</option>
+            <option>Tito</option>
+          </select>
+        </div>
+        <div class="row2">
+          <div>
+            <label for="bday">Preferred day</label>
+            <select id="bday">
+              <option>Today</option><option>Tomorrow</option><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option>
+            </select>
+          </div>
+          <div>
+            <label for="btime">Preferred time</label>
+            <select id="btime">
+              <option>Morning</option><option>Midday</option><option>Afternoon</option><option>Evening</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-wa" id="bsend">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.83 14.16c-.25.7-1.45 1.33-2 1.38-.51.05-1.16.24-3.92-.82-3.32-1.31-5.42-4.72-5.58-4.94-.16-.22-1.33-1.77-1.33-3.38 0-1.61.85-2.4 1.15-2.73.3-.33.66-.41.88-.41l.63.01c.2.01.47-.08.74.56.27.66.93 2.27 1.01 2.43.08.16.14.36.03.58-.11.22-.16.36-.32.55-.16.19-.34.43-.49.58-.16.16-.33.34-.14.66.19.33.84 1.39 1.8 2.25 1.24 1.1 2.28 1.44 2.61 1.6.33.16.52.14.71-.08.19-.22.82-.95 1.04-1.28.22-.33.44-.27.74-.16.3.11 1.9.9 2.23 1.06.33.16.55.25.63.38.08.14.08.8-.17 1.5z"/></svg>
+          Send request on WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="work">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <div class="eyebrow">The work</div>
+      <h2>Fresh off <em>the chair</em></h2>
+      <p>A few recent cuts from the chair.</p>
+    </div>
+    <div class="galgrid">
+      <div class="gal reveal"><img src="images/fade.jpg" alt="Skin fade with beard sculpt" loading="lazy" width="680" height="907"></div>
+      <div class="gal reveal"><img src="images/braids.jpg" alt="Pattern braids, fresh from the chair" loading="lazy" width="680" height="907"></div>
+      <div class="gal reveal"><img src="images/colour.jpg" alt="Colour and a fresh cut on curly hair" loading="lazy" width="680" height="907"></div>
+    </div>
+    <div class="galrow2">
+      <div class="gal small reveal"><img src="images/shop.jpg" alt="Inside the shop" loading="lazy" width="280" height="350"></div>
+      <div class="galcap reveal">
+        <h3>More every week</h3>
+        <p>Fresh cuts every week. Bring us a photo of what you want and we'll match it, line for line.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="barbers">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <div class="eyebrow">The barbers</div>
+      <h2>Two cousins, <em>one standard</em></h2>
+      <p>Ngao Barbers was started by two cousins who grew up around the craft. Book either chair — the standard doesn't change.</p>
+    </div>
+    <div class="teamgrid">
+      <div class="team reveal">
+        <div class="tavatar">J</div>
+        <div>
+          <h3>Juma</h3>
+          <p class="trole">Co-founder · Head barber</p>
+          <p class="tbio">Fades, beard work and creative cuts, with a client list built one haircut at a time.</p>
+        </div>
+      </div>
+      <div class="team reveal">
+        <div class="tavatar">T</div>
+        <div>
+          <h3>Tito</h3>
+          <p class="trole">Co-founder · Barber</p>
+          <p class="tbio">Juma's cousin and business partner. Same craft, same attention to detail, second chair.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sechead reveal">
+      <div class="eyebrow">Word on the street</div>
+      <h2>What clients <em>say</em></h2>
+    </div>
+    <div class="revgrid">
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Best fade I've had in the CBD. They take their time — no rushing you out of the chair."</p>
+        <div class="who">Kevin · Sample review</div>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Showed him one photo from Instagram and he matched it exactly. My barber for good now."</p>
+        <div class="who">Dennis · Sample review</div>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>"The beard work is different class. Clean lines every single time."</p>
+        <div class="who">Otis · Sample review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="reveal">
+      <a class="maplink" href="https://www.google.com/maps/search/?api=1&amp;query=Kimathi%20Street%2C%20Nairobi" target="_blank" rel="noopener" aria-label="Open Kimathi Street on Google Maps">
+        <img src="images/city.jpg" alt="Nairobi CBD from above" width="940" height="478">
+        <span class="maptag">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          Open in Google Maps
+        </span>
+      </a>
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">Find the chair</div>
+      <h2>Visit <em>the shop</em></h2>
+      <div style="margin-top:18px">
+        <div class="vrow">
+          <span class="vic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+          <div><h4>Location</h4><p>Mwamba House · Kimathi Street, Nairobi CBD<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Kimathi%20Street%2C%20Nairobi" target="_blank" rel="noopener">Get directions →</a></p></div>
+        </div>
+        <div class="vrow">
+          <span class="vic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+          <div><h4>Hours</h4><p>Mon – Sat · 7:00 AM – 7:00 PM<br>Sun · Closed</p></div>
+        </div>
+        <div class="vrow">
+          <span class="vic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div><h4>Book / call</h4><p><a href="https://wa.me/254769968444?text=Hi%20Storyfront%2C%20I%20just%20saw%20the%20Ngao%20Barbers%20concept%20on%20your%20portfolio.%20I%27d%20like%20a%20website%20like%20this%20for%20my%20business." target="_blank" rel="noopener">WhatsApp 0769 968 444</a> · <a href="tel:+254769968444">Call 0769 968 444</a></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fbrand">
+      <div class="brandmark"><img src="images/icon-96.png" alt=""></div>
+      <div>
+        <div class="brandname" style="font-size:16px">Ngao <span>Barbers</span></div>
+        <div class="fsmall">Cut sharp, leave sharper · Founded by Juma &amp; Tito · Nairobi CBD</div>
+      </div>
+    </div>
+    <div class="socials">
+      
+      
+      <a href="tel:+254769968444" aria-label="Call"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+    </div>
+    <div class="fsmall">© 2026 Ngao Barbers</div>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/254769968444?text=Hi%20Storyfront%2C%20I%20just%20saw%20the%20Ngao%20Barbers%20concept%20on%20your%20portfolio.%20I%27d%20like%20a%20website%20like%20this%20for%20my%20business." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.83 14.16c-.25.7-1.45 1.33-2 1.38-.51.05-1.16.24-3.92-.82-3.32-1.31-5.42-4.72-5.58-4.94-.16-.22-1.33-1.77-1.33-3.38 0-1.61.85-2.4 1.15-2.73.3-.33.66-.41.88-.41l.63.01c.2.01.47-.08.74.56.27.66.93 2.27 1.01 2.43.08.16.14.36.03.58-.11.22-.16.36-.32.55-.16.19-.34.43-.49.58-.16.16-.33.34-.14.66.19.33.84 1.39 1.8 2.25 1.24 1.1 2.28 1.44 2.61 1.6.33.16.52.14.71-.08.19-.22.82-.95 1.04-1.28.22-.33.44-.27.74-.16.3.11 1.9.9 2.23 1.06.33.16.55.25.63.38.08.14.08.8-.17 1.5z"/></svg>
+</a>
+
+<script>
+  // Structured WhatsApp appointment request
+  document.getElementById('bsend').addEventListener('click', function(){
+    var name = document.getElementById('bname').value.trim() || '—';
+    var svc  = document.getElementById('bsvc').value;
+    var day  = document.getElementById('bday').value;
+    var time = document.getElementById('btime').value;
+    var barber = document.getElementById('bbarber').value;
+    var msg = 'Hi Storyfront, this came from the booking form on the Ngao Barbers concept:\n\n'
+            + 'Hi Ngao Barbers! I\'d like to book an appointment.\n'
+            + 'Name: ' + name + '\n'
+            + 'Service: ' + svc + '\n'
+            + 'Barber: ' + barber + '\n'
+            + 'Preferred: ' + day + ', ' + time;
+    window.open('https://wa.me/254769968444?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+
+  // Fade-in on scroll (respects reduced motion via CSS)
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold: 0.12, rootMargin: '0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+<script src="../_shared/concept.js" data-back="../../#starter" data-name="ngao" defer></script>
+</body>
+</html>
