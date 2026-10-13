@@ -261,3 +261,21 @@ footer a{color:var(--paper);text-decoration:none}
 .next b{display:block;font-size:22px;margin-top:6px}
 .next a:last-child{text-align:right}
 @media (max-width:560px){.next{grid-template-columns:1fr}.next a:last-child{text-align:left}}
+
+/* Website Check band (inside #packages) */
+.check{display:grid;grid-template-columns:1.35fr 1fr;gap:34px;margin-top:40px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:34px 32px;scroll-margin-top:90px}
+.check h3{font-size:clamp(24px,3vw,32px);margin-top:14px;letter-spacing:-.02em}
+.check h3 .serif{color:var(--teal)}
+.check-l p{color:var(--muted);margin-top:12px;font-size:16px;max-width:38em}
+.check-l ul{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.check-l li{font-size:14px;font-weight:600;background:var(--paper);border-radius:999px;padding:7px 14px}
+.check .fine{font-size:13.5px;margin-top:16px}
+.check-r{display:flex;flex-direction:column;align-items:flex-start;border-left:1px solid var(--line);padding-left:32px}
+.check-r .price{font:800 34px/1 var(--sans);letter-spacing:-.03em}
+.check-r .price small{display:block;font:600 12.5px/1.4 var(--sans);letter-spacing:.02em;color:var(--muted);margin-bottom:6px}
+.check-r .care{font-size:14.5px;color:var(--muted);margin-top:10px}
+.check-r .then{list-style:none;margin:18px 0 22px;padding:16px 0 0;border-top:1px solid var(--line);display:grid;gap:10px;width:100%}
+.check-r .then li{display:flex;flex-direction:column;font-size:15px}
+.check-r .then span{color:var(--muted);font-size:14px}
+.check-r .sample{margin-top:16px;font-size:14.5px}
+@media (max-width:860px){.check{grid-template-columns:1fr;padding:26px 22px;gap:24px}.check-r{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:24px}}
